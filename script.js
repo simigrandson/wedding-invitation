@@ -2,7 +2,38 @@
 // Premium Wedding Invitation
 // script.js
 // ============================
+// ==========================
+// Background Music
+// ==========================
 
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+let playing = false;
+
+// Many browsers block autoplay until the user interacts.
+// Start playback on the first click anywhere on the page.
+document.addEventListener(
+  "click",
+  () => {
+    if (!playing) {
+      music.play().catch(() => {});
+      playing = true;
+      musicBtn.innerHTML = "🔊";
+    }
+  },
+  { once: true }
+);
+
+musicBtn.addEventListener("click", () => {
+  if (music.paused) {
+    music.play();
+    musicBtn.innerHTML = "🔊";
+  } else {
+    music.pause();
+    musicBtn.innerHTML = "🔇";
+  }
+});
 // Hide Loader
 window.addEventListener("load", () => {
     const loader = document.querySelector(".loader");

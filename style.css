@@ -323,3 +323,47 @@ padding:30px;
 }
 
 }
+
+/* Music Button */
+
+.music-btn{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.9);
+
+color:#d4af37;
+
+font-size:18px;
+
+border:2px solid #d4af37;
+
+cursor:pointer;
+
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+z-index:9999;
+
+transition:.3s;
+
+}
+
+.music-btn:hover{
+
+transform:scale(1.1);
+
+background:#d4af37;
+
+color:white;
+
+}
